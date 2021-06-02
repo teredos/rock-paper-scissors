@@ -1,3 +1,4 @@
+// computerPlay() function randomly picks between three options to decide the computer's choice.
 function computerPlay() {
     switch (Math.floor(Math.random() * 3 + 1)) {
         case 1:
@@ -9,6 +10,8 @@ function computerPlay() {
     }
 }
 
+// playRound(player, computer) function takes the player's input and computer's input, compares them
+// to each other, then returns a result based on the rules of "Rock Paper Scissors".
 function playRound(player, computer) {
 
     if (player === null) {
@@ -59,6 +62,9 @@ function playRound(player, computer) {
     
 }
 
+// game() function plays 5 rounds of "Rock Paper Scissors", after each round returning the current
+// round number, player score and computer score. Once the 5 rounds have ended, returns a final
+// message based on whether the player has a higher, lower, or the same score as the computer.
 function game() {
 
     let roundNumber = 0;
@@ -98,13 +104,17 @@ function game() {
 
 }
 
+// variables playerSelection and computerSelection declared.
 let playerSelection;
 let computerSelection;
 
+// beginRound() function takes the player's input and computer's input and outputs them into the
+// playRound() function.
 function beginRound() {
     playerSelection = prompt("Rock Paper Scissors?");
     computerSelection = computerPlay();
     return(playRound(playerSelection, computerSelection));
 }
 
-console.log(game());
+// Runs game() function to begin the game.
+game();
