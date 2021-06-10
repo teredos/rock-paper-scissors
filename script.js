@@ -85,17 +85,17 @@ function game() {
                 return;
             case "win":
                 playerScore++;
-                console.log(`Your score: ${playerScore}
-                        Computer's score: ${computerScore}`);
+                console.log(`Your score: ${playerScore}`);
+                console.log(`Computer's score: ${computerScore}`);
                 break;
             case "lose":
                 computerScore++;
-                console.log(`Your score: ${playerScore}
-                        Computer's score: ${computerScore}`);
+                console.log(`Your score: ${playerScore}`);
+                console.log(`Computer's score: ${computerScore}`);
                 break;
             case "tie":
-                console.log(`Your score: ${playerScore}
-                        Computer's score: ${computerScore}`);
+                console.log(`Your score: ${playerScore}`);
+                console.log(`Computer's score: ${computerScore}`);
                 break;
         }
     }
@@ -110,15 +110,11 @@ function game() {
 
 }
 
-// variables playerSelection and computerSelection declared.
-let playerSelection;
-let computerSelection;
-
 // beginRound() function takes the player's input and computer's input and
 // outputs them into the playRound() function.
 function beginRound() {
-    playerSelection = prompt("Rock Paper Scissors?");
-    computerSelection = computerPlay();
+    let playerSelection = prompt("Rock Paper Scissors?");
+    let computerSelection = computerPlay();
     return(playRound(playerSelection, computerSelection));
 }
 
